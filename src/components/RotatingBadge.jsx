@@ -1,3 +1,4 @@
+import { img } from '../utils/img.js'
 import { useId } from 'react'
 // Circumference of the text path (r = 78) so the text fills the ring exactly once.
 const CIRC = 2 * Math.PI * 78
@@ -11,7 +12,7 @@ export default function RotatingBadge({ text = 'ASSISTIA CANADA • ', size = 13
           <textPath href={'#' + id} textLength={CIRC - 6} lengthAdjust="spacing">{text}</textPath>
         </text>
       </svg>
-      <img className="pin" src="/img/logo-white-2.png" alt="" style={{ height: size * 0.3 }} />
+      <img className="pin" src={img('logo-white-2.png')} alt="" style={{ height: size * 0.3 }} />
     </div>
   )
 }

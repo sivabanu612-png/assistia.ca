@@ -1,3 +1,4 @@
+import { img } from '../utils/img.js'
 import { useEffect, useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { nav } from '../data.js'
@@ -30,7 +31,7 @@ export default function Header() {
       </div>
       <div className="navbar">
         <div className="container navbar-inner">
-          <Link to="/" className="logo"><img src="/img/logo-main.png" alt="Assistia Canada" /></Link>
+          <Link to="/" className="logo"><img src={img('logo-main.png')} alt="Assistia Canada" /></Link>
           <nav className={`menu ${open ? 'open' : ''}`}>
             {nav.map((n) => <NavLink key={n.label} to={n.to} end onClick={() => setOpen(false)}>{n.label}</NavLink>)}
             <Link className="btn btn-sm" to="/contact" onClick={() => setOpen(false)}>Inquire Now <Icon name="arrow" size={16} /></Link>

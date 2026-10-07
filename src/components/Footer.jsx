@@ -1,3 +1,4 @@
+import { img } from '../utils/img.js'
 import { Link } from 'react-router-dom'
 import Newsletter from './Newsletter.jsx'
 import Icon from './Icon.jsx'
@@ -9,7 +10,7 @@ export default function Footer() {
       <Newsletter />
       <div className="container foot-grid">
         <div>
-          <Link to="/" className="foot-logo"><img src="/img/logo-white-2.png" alt="" /><span>Assistia</span></Link>
+          <Link to="/" className="foot-logo"><img src={img('logo-white-2.png')} alt="" /><span>Assistia</span></Link>
           <p>Creative web design and eCommerce development agency helping businesses grow, convert and thrive online.</p>
           <div className="social">{socials.map(([n, u, l]) => <a key={n} href={u} target="_blank" rel="noreferrer" aria-label={n}>{l}</a>)}</div>
         </div>

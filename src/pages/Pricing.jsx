@@ -1,3 +1,4 @@
+import { img } from '../utils/img.js'
 import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero.jsx'
 import CtaBand from '../components/CtaBand.jsx'
@@ -40,8 +41,8 @@ export default function Pricing() {
       <section className="included">
         <div className="container included-inner">
           <div className="polaroids" data-r>
-            <div className="pol a"><img src="/img/Assistia-Canada.jpg" alt="" /></div>
-            <div className="pol b"><img src="/img/Assistia-Toronto.jpg" alt="" /></div>
+            <div className="pol a"><img src={img('Assistia-Canada.jpg')} alt="" /></div>
+            <div className="pol b"><img src={img('Assistia-Toronto.jpg')} alt="" /></div>
           </div>
           <RotatingBadge text="BEYOND THE BEST • " size={120} />
           <div data-r>

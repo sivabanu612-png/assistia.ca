@@ -1,5 +1,8 @@
+import { img } from '../utils/img.js'
 import { Link } from 'react-router-dom'
 import Icon from './Icon.jsx'
+
+
 export default function Hero() {
   return (
     <section className="hero">
@@ -22,9 +25,11 @@ export default function Hero() {
         <div className="hv" data-r>
           <div className="hv-main">
             <div className="hv-bar"><i /><i /><i /><span>assistia.ca</span></div>
-            <img src="/img/Assistia-Sales.gif" alt="Web design illustration" />
+            <img src={img('Assistia-Sales.gif')} alt="Web design illustration" />
           </div>
-          <div className="hv-float ba"><img src="/img/Assistia-Canada-Web-Design-1.jpg" alt="Before and after Assistia: leads and sales growth" /></div>
+          <div className="hv-float ba">
+            <img src={img('Assistia-Canada-Web-Design-1.jpg')} alt="Before and after Assistia: leads and sales growth" />
+          </div>
           <div className="hv-chip c1"><span className="ci"><Icon name="trend" size={18} /></span><div><strong>+30%</strong><small>Profit growth</small></div></div>
           <div className="hv-chip c2"><span className="ci"><Icon name="sparkle" size={18} /></span><div><strong>GEO Ready</strong><small>Ranks in AI search</small></div></div>
         </div>

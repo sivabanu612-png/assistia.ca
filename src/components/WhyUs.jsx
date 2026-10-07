@@ -1,3 +1,4 @@
+import { img } from '../utils/img.js'
 import { Link } from 'react-router-dom'
 import { reasons } from '../data.js'
 import Icon from './Icon.jsx'
@@ -7,8 +8,8 @@ export default function WhyUs() {
       <div className="container whyus-inner">
         <div className="whyus-imgs" data-r>
           <span className="frame" />
-          <img src="/img/Assistia-Canada.jpg" alt="Assistia Canada team" />
-          <img src="/img/Assistia-Toronto.jpg" alt="Toronto" />
+          <img src={img('Assistia-Canada.jpg')} alt="Assistia Canada team" />
+          <img src={img('Assistia-Toronto.jpg')} alt="Toronto" />
           <div className="img-badge"><Icon name="star" size={20} /><div><strong>600+</strong><small>Websites launched</small></div></div>
         </div>
         <div className="whyus-text">
